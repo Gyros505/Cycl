@@ -12,9 +12,9 @@ t2 := evalf(8*Pi);
 wheel:=proc(t)
     local s, c, p, l;
     s := s0 + t*R;
-    c := plottools:-circle([s, h], R, color = sienna, legend = "колесо"):
-    p := plottools:-point([s - R*sin(t), h - R*cos(t)], color = blue, symbolsize = 10, symbol = solidcircle):
-    l := plottools:-line([s, h], [s - R*sin(t), h - R*cos(t)], color = sienna):
+    c := circle([s, h], R, color = sienna, legend = "колесо"):
+    p := point([s - R*sin(t), h - R*cos(t)], color = blue, symbolsize = 10, symbol = solidcircle):
+    l := line([s, h], [s - R*sin(t), h - R*cos(t)], color = sienna):
     plots:-display([c, p, l], scaling = constrained);
 end proc;
 
